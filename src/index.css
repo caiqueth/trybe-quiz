@@ -4,6 +4,9 @@
   --verde-trybe: #1db702;
   --verde-claro: #e1f2d5;
   --verde-escuro: #034422;
+  /* background-color: var(--verde-escuro); */
+  background-image: url(assets/background_pattern.png);
+  background-repeat: repeat;
 }
 
 body {
@@ -13,9 +16,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--verde-escuro);
-  background-image: url(assets/background_pattern.svg);
-  background-repeat: repeat;
 }
 
 h1 {
@@ -38,6 +38,7 @@ p {
 }
 
 button {
+  font-family: Inter, sans-serif;
   background-color: #1db702;
   border: none;
   border-radius: 10px;
@@ -115,7 +116,7 @@ button:hover {
   left: "50%";
   transform: translateX(-50%);
   border-radius: 40%;
-  animation: fill 2s ease-in-out infinite;
+  animation: fill 2s ease-in-out 1;
   z-index: -1;
 }
 
