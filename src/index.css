@@ -14,6 +14,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--verde-escuro);
+  background-image: url(assets/background_pattern.svg);
+  background-repeat: repeat;
 }
 
 h1 {
@@ -33,30 +35,113 @@ h3 {
 
 p {
   color: #034422;
-  
-}
-.heart {
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 150px;
-  height: 180px;
-  background: url(pages/wave.png);
-  background-position: 0px 800px;
-  background-repeat: repeat-x;
-  border: #034422;
-  animation: filling 10s ease-in-out infinite; /* infinite */
-  mask-image: url(pages/heart_filled.svg);
-}
-
-@keyframes filling {
-  50% {background-position: 0px 0px;}
-  100% {background-position: 0px 350px;}
 }
 
 button {
-  font-family:  Inter, 'Segoe UI', 'Roboto', 'Oxygen',
-  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-  sans-serif;
+  background-color: #1db702;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 18px;
+  color: white;
+  margin: auto;
+  cursor: pointer;
+  font-size: 1.25em;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #23d100;
+}
+
+.question-container {
+  padding: 10px;
+  margin: 10px 4px 10px 4px;
+  border-radius: 8px;
+  border: 4px solid var(--verde-escuro);
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+.question-container:hover {
+  color: var(--verde-trybe);
+}
+
+.heart-container {
+  margin: 0px;
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heart {
+  width: 160px;
+  height: 160px;
+  line-height: 160px;
+  text-align: center;
+  color: var(--verde-claro);
+  font-size: 28px;
+  font-weight: 600;
+  text-transform: uppercase;
+  mask-image: url(assets/heart_filled.svg);
+  outline: 1px black;
+  position: relative;
+  overflow: hidden;
+}
+
+.heart-outline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 160px;
+  height: 160px;
+  line-height: 160px;
+  text-align: center;
+  color: var(--verde-escuro);
+  font-size: 25px;
+  font-weight: 600;
+  background-image: url(assets/heart_outline.svg);
+  text-transform: uppercase;
+  mask-image: url(assets/heart_filled.svg);
+  outline: 1px black;
+  overflow: hidden;
+}
+
+.heart::before {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: var(--verde-trybe);
+  left: "50%";
+  transform: translateX(-50%);
+  border-radius: 40%;
+  animation: fill 2s ease-in-out infinite;
+  z-index: -1;
+}
+
+.heart::after {
+  width: 200px;
+  height: 180px;
+  line-height: 180px;
+  text-align: center;
+  color: var(--verde-escuro);
+  font-size: 25px;
+  font-weight: 600;
+  text-transform: uppercase;
+  background-image: url(assets/heart_outline.svg);
+  outline: 1px black;
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes fill {
+  from {
+    top: 250px;
+    transform: translateX(-50%) rotate(0deg);
+  }
+
+  to {
+    top: -50px;
+    transform: translateX(-50%) rotate(360deg);
+  }
 }

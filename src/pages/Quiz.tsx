@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useHistory } from "react-router-dom";
 import { Button } from "../components/Button";
 import useQuizContext from "../hooks/useQuizContext";
 import { QuestionContainer } from "../components/QuestionContainer";
-import { Checkbox } from "../components/Checkbox";
+
 
 export const Quiz: React.FC = (): JSX.Element => {
 
@@ -35,7 +35,7 @@ export const Quiz: React.FC = (): JSX.Element => {
         ))}
       </div>
       <div>
-        <Button onClick={handleGoToResults}>Testar</Button>
+        <Button onClick={handleGoToResults}>Vamos lá!</Button>
       </div>
     </>
   )

@@ -16,18 +16,7 @@ export const Button = ({ children, onClick }: {
         left: "50%",
         transform: "translate(-50%, -50%)",
       }}>
-        <button
-          onClick={onClick}
-          style={{
-            backgroundColor: "#1db702",
-            border: "none",
-            borderRadius: "6px",
-            padding: "12px 18px",
-            color: "white",
-            margin: "auto",
-            cursor: "pointer",
-            fontSize: "1.25em"
-          }}>
+        <button onClick={onClick}>
           {children}
         </button>
       </div>
