@@ -23,7 +23,12 @@ export const Home: React.FC = (): JSX.Element => {
         Faça o teste e descubra!
       </h2>
       <div>
-        <Button onClick={handleStartTest}>Iniciar 🠊</Button>
+        <Button onClick={handleStartTest}>
+          Iniciar
+          <span className="material-symbols-outlined"
+            style={{ verticalAlign: "bottom", marginLeft: "4px" }}
+          >arrow_forward</span>
+        </Button>
       </div>
     </div>
   )

@@ -78,7 +78,12 @@ export const Result: React.FC = (): JSX.Element => {
       <div>
         {grade >= 75
           ? <Button onClick={handleSubscribe}>Inscreva-se!</Button>
-          : <Button onClick={handleGotoHome}>🠈 Voltar</Button>
+          : <Button onClick={handleGotoHome}>
+            <span className="material-symbols-outlined"
+              style={{ verticalAlign: "bottom", marginRight: "4px" }}
+            >arrow_back</span>
+            Voltar
+          </Button>
         }
       </div>
     </>

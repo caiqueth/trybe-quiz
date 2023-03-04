@@ -20,6 +20,8 @@ export const Quiz: React.FC = (): JSX.Element => {
       <div style={{
         background: "var(--verde-trybe)",
         color: "var(--verde-claro)",
+        fontWeight: 600,
+        fontSize: "18px",
         padding: "10px",
         margin: "4px",
         borderRadius: "8px",
