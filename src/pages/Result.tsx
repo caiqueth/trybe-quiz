@@ -3,6 +3,7 @@ import { useHistory } from "react-router-dom";
 import { Button } from "../components/Button";
 import useQuizContext from "../hooks/useQuizContext";
 import { Heart } from "./Heart";
+import logo from "../assets/logo.svg"
 
 export const Result: React.FC = (): JSX.Element => {
 
@@ -47,32 +48,30 @@ export const Result: React.FC = (): JSX.Element => {
   switch (true) {
     case grade >= 75:
       title = "Deu match!";
-      text = "Você está no caminho certo!";
+      text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.";
       break;
     case grade >= 50:
-      title = "Quase lá!"
-      text = "Foi quase, mas ainda não é certeza de que esse é o caminho certo pra você.";
+      title = "Lorem ipsum I"
+      text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.";
       break;
     case grade >= 30:
-      title = "Falta algo."
-      text = "Parece que você precisa pesquisar um pouco mais sobre nosso conteúdo.";
+      title = "Lorem ipsum II"
+      text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.";
       break;
     case grade >= 0:
-      title = "Ops!"
-      text = "Talvez a Trybe não seja pra você.";
+      title = "Lorem ipsum III"
+      text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.";
       break;
   }
 
   return (
     <>
-      <div style={{
-        textAlign: "center",
-      }}>
+      <div style={{marginTop: "26px"}}>
         <Heart value={percent} />
-        <h1 style={{ marginTop: 0 }}>
+        <h1>
           {title}
         </h1>
-        <h3>Você marcou {grade}% das afirmações</h3>
+        <p>Você marcou {grade}% das afirmações.</p>
         <p>{text}</p>
       </div>
       <div>
@@ -80,12 +79,16 @@ export const Result: React.FC = (): JSX.Element => {
           ? <Button onClick={handleSubscribe}>Inscreva-se!</Button>
           : <Button onClick={handleGotoHome}>
             <span className="material-symbols-outlined"
-              style={{ verticalAlign: "bottom", marginRight: "4px" }}
+              style={{ fontSize: "34px", verticalAlign: "middle", marginRight: "4px" }}
             >arrow_back</span>
             Voltar
           </Button>
         }
       </div>
+      <div style={{ margin: "26px 0 26px 0" }}>
+        <img src={logo} alt="" height={"32px"}></img>
+      </div>
     </>
   )
 }
+

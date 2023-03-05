@@ -6,20 +6,11 @@ export const Button = ({ children, onClick }: {
 }): JSX.Element => {
   return (
     <div style={{
-      height: "100px",
-      position: "relative",
+      margin: "10px",
     }}>
-      <div style={{
-        margin: 0,
-        position: "absolute",
-        top: "50%",
-        left: "50%",
-        transform: "translate(-50%, -50%)",
-      }}>
-        <button onClick={onClick}>
-          {children}
-        </button>
-      </div>
+      <button onClick={onClick}>
+        {children}
+      </button>
     </div>
   )
 }

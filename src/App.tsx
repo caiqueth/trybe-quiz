@@ -2,12 +2,13 @@ import { Home } from "./pages/Home"
 import {
   BrowserRouter as Router,
   Switch,
-  Route
+  Route,
 } from "react-router-dom";
 import { Container } from "./components/Container";
 import { Quiz } from './pages/Quiz';
 import { QuizProvider } from './context/QuizContext';
 import { Result } from './pages/Result';
+import "./index.css"
 
 function App() {
   return (

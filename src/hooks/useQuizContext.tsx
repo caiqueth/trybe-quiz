@@ -4,7 +4,7 @@ import { QuizContext } from "../context/QuizContext"
 const useQuizContext = () => {
   const context = useContext(QuizContext);
   if (!context)
-    throw "QuizContext must be used inside QuizContext provider!"
+    throw Error("QuizContext must be used inside QuizContext provider!");
   return context;
 }
 
