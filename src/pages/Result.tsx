@@ -11,7 +11,7 @@ export const Result: React.FC = (): JSX.Element => {
   const history = useHistory();
 
   const grade = Math.floor(questions.filter((q) => q.checked).length / questions.length * 100)
-  const [percent, setPercent] = useState(0);
+  const [movingGrade, setMovingGrade] = useState(0);
 
   const handleGotoHome = () => {
     history.push("/");
@@ -32,14 +32,14 @@ export const Result: React.FC = (): JSX.Element => {
       let stepTime = Math.abs(Math.floor(duration / range));
       let timer = setInterval(() => {
         current += increment;
-        setPercent(current);
+        setMovingGrade(current);
         if (current === end) {
           clearInterval(timer);
         }
       }, stepTime);
     }
-
-    animateValue();
+    
+    animateValue()
   }, [grade])
 
   let text = "";
@@ -67,7 +67,7 @@ export const Result: React.FC = (): JSX.Element => {
   return (
     <>
       <div style={{marginTop: "26px"}}>
-        <Heart value={percent} />
+        <Heart value={movingGrade} grade={grade} />
         <h1>
           {title}
         </h1>

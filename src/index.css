@@ -137,45 +137,6 @@ p {
   background-image: url(assets/heart_outline.svg);
 }
 
-.heart {
-  width: 160px;
-  height: 160px;
-  line-height: 160px;
-  text-align: center;
-  color: var(--verde-claro);
-  font-size: 34px;
-  font-weight: 600;
-  font-family: RoobertSemiBold;
-  text-transform: uppercase;
-  mask-image: url(assets/heart_filled.svg);
-  position: relative;
-  overflow: hidden;
-}
-.heart::before {
-  content: "";
-  position: absolute;
-  width: 400px;
-  height: 400px;
-  background: var(--verde-trybe);
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 40%;
-  animation: fill 2s ease-in-out 1;
-  z-index: -1;
-}
-
-@keyframes fill {
-  from {
-    top: 250px;
-    transform: translateX(-50%) rotate(0deg);
-  }
-
-  to {
-    top: -50px;
-    transform: translateX(-50%) rotate(360deg);
-  }
-}
-
 .fade-enter {
   opacity: 0;
   z-index: 1;
